@@ -15,4 +15,4 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
-          az storage blob upload-batch -s $GITHUB_WORKSPACE/ -d \$web --destination-path sign-in --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          az storage blob upload-batch -s $GITHUB_WORKSPACE/ -d "\$web" --destination-path sign-in --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
